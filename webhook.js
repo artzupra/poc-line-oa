@@ -15,7 +15,7 @@ app.post('/webhook', (req, res) => {
         if (event.source && event.source.type === 'group') {
             const groupId = event.source.groupId;
             console.log(`🔹 Group ID: ${groupId}`);
-
+            console.log(JSON.stringify(event));
             // (ตัวอย่าง) ส่ง Group ID กลับไปยังกลุ่ม
             // replyMessage(event.replyToken, `Group ID ของคุณคือ: ${groupId}`);
         }
